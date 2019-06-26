@@ -32,7 +32,7 @@ function addItemToShoppingList() {
 
 function createListItemHtml() {
 	return `<li>
-					Item Name - Amount
+					${itemName.value} - ${itemAmount.value}
 			  </li>
 	`;
 }
