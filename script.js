@@ -36,7 +36,7 @@ function addItemToShoppingList() {
 function setDeleteButtonEvent(id) {
 	let deleteButton = document.getElementById("button"+id);
 	deleteButton.addEventListener("click", () => {
-		console.log("Delete Button Works!");
+		console.log("Delete Button Works");
 	});
 }
 
