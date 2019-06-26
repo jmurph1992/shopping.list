@@ -16,6 +16,7 @@ function handleItemForm(event, formRef) {
 	}
 
 	addItemToShoppingList();
+	formRef.reset();
 
 	return false;
 }
