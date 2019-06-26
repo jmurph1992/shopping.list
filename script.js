@@ -30,20 +30,19 @@ function addItemToShoppingList() {
 	let itemListRef = document.getElementById("shopping-list");
 	itemListRef.insertAdjacentHTML("afterend", itemHtml);
 
-	setDeleteButtonEvent(id);
 }
 
 function setDeleteButtonEvent(id) {
 	let deleteButton = document.getElementById("button"+id);
-	deleteButton.addEventListener("click", () => {
-		console.log("Delete Button Works");
+	deleteButton.addEventListener("click" , () => {
+		console.log("Delete Button Works!");
 	});
 }
 
 function createListItemHtml(itemName, itemAmount, id) {
 	return `<li id="item${id}">
 					${itemName} - ${itemAmount}
-					<button type="button${id}">Delete Item</button>
+					<button id="button${id}" type="button">Delete Item</button>
 			  </li>
 	`;
 }
