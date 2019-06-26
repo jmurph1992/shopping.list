@@ -15,10 +15,7 @@ function handleItemForm(event, formRef) {
 		event.preventDefault();
 	}
 
-	let itemHtml = addItemToShoppingList();
-	console.log("Item HTML: ", itemHtml);
-	let itemListRef = document.getElementById("shopping-list");
-	itemListRef.insertAdjacentHTML("afterend", itemHtml);
+	addItemToShoppingList();
 
 	return false;
 }
@@ -27,7 +24,10 @@ function addItemToShoppingList() {
 	let itemName = document.getElementById("item-name");
 	let itemAmount = document.getElementById("item-amount");
 
-
+	let itemHtml = createListItemHtml();
+	console.log("Item HTML: ", itemHtml);
+	let itemListRef = document.getElementById("shopping-list");
+	itemListRef.insertAdjacentHTML("afterend", itemHtml);
 }
 
 function createListItemHtml() {
